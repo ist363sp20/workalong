@@ -1,0 +1,17 @@
+.blue-flex-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.blue-flex-item {
+    background-color: lightblue;
+    color: black;
+    font-size: 2em;
+    flex-basis: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin: 10px;
+}
