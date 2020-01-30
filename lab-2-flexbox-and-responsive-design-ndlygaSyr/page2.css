@@ -1,0 +1,77 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.header {
+    background-color: red;
+    height: 100px;
+}
+
+.footer {
+    background-color: #333;
+    height: 200px;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 2;
+    align-items: stretch;
+}
+
+#content > div > article,
+#content > div > aside {
+    background-color: lightgray;
+    border: 5px solid #666666; 
+    min-height: 300px;
+    height: 100%;
+}
+
+#content > div {
+    padding: 10px;
+}
+
+#content > div:first-child {
+    width: 66%;
+}
+
+#content > div:last-child {
+    width: 33%;
+}
+
+@media screen and (max-width: 767px) {
+    html, body {
+        height: auto;
+    }
+    #content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #content > div > article,
+    #content > div > aside {
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    #content > div:first-child {
+        width: 100%;
+    }
+    
+    #content > div:last-child {
+        width: 100%;
+    }
+
+}
