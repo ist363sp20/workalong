@@ -1,4 +1,23 @@
 /*a-1 Animation*/
+
+
+@keyframes LeftToRight {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.a-2 .box {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    left: 0;
+    background-color: black;
+    animation: LeftToRight 5s ease-in-out alternate infinite;
+}
 	
 
 /*a-2 Animation*/

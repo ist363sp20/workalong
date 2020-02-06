@@ -31,15 +31,55 @@
 
     .n-2 a:hover::after {
         width: 100%;
-       transition: width 1s;
+        transition: width 1s;
     }
 
 
 /*navs.html Transition 3*/
     .n-3 nav {background-color:#009688;}
-    .n-3 a {color:#fff;}
+    .n-3 a {
+        color: #fff;
+        line-height: 40px;
+        position:relative;
+    }
 
-    .n-3 a {position:relative;}
+    .n-3 a::after {
+        content: "";
+        height: 2px;
+        width: 0;
+        background-color: white;
+        display: block;
+        transition: width 1s;
+    }
+
+    .n-3 a::before {
+        content: "";
+        height: 2px;
+        width: 0;
+        background-color: white;
+        display: block;
+        transition: width 1s;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .n-3 li {
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .n-3 a:hover::after {
+        width: 100%;
+        transition: width 1s;
+    }
+
+    .n-3 a:hover::before {
+        width: 100%;
+        transition: width 1s;
+    }
+
 
 
     
