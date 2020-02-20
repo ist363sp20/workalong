@@ -10,3 +10,10 @@ Demos:
 
 - operators
 
+
+## Part two
+
+- the if statement
+- the for statement
+- the while statement
+- the switch statement

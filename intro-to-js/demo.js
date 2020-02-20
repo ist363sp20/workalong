@@ -11,4 +11,4 @@ document.getElementById("clicker").addEventListener("click", function() {
     document.getElementById("count").innerHTML = clicked;
 })
 
-if 
+
