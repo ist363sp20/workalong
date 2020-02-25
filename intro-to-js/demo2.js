@@ -2,18 +2,21 @@
 
 // The if statement
 
-// var age = prompt("How old are you? ")
+// var age = parseInt(prompt("How old are you? "))
 
-// if (age > 18) { // Condition, MUST BE A BOOLEAN (TRUE/FALSE)
-//     alert("You can vote!") // execute this code if true
-// } else {
+// if (age === 18) { // Condition, MUST BE A BOOLEAN (TRUE/FALSE)
+//     alert("Yay you are an adult") // execute this code if true
+// } else if (age < 18) {
 //     alert("You can not vote!") // execute this code if false
+// } else {
+//     alert("you can vote");
 // }
 
 
 // The Switch Statement (Replacement for if / elseif / else )
-// switch (prompt("What is the weather like?")) {
-//     case "rainy":
+// var age = 18
+// switch (age) {
+//     case age === 18:
 //       alert("Remember to bring an umbrella.");
 //       break;
 //     case "sunny":
@@ -29,22 +32,22 @@
 
 // Scope
 
-// // Outside of the block
+// Outside of the block
 // if (true) { // Start of the code block
-//     let myVar = "nick";
+//     var myVar = "nick";
 //     console.log(myVar);
 //     // Inside of the block
 // } 
 // console.log(myVar);
-// // Outside of the block
+// Outside of the block
 
 
 
 // The for loop
 
-// let num = prompt("Please enter a number")
+// let num = parseInt(prompt("Please enter a number"))
 
-// for (let i = 0 ; i < num ; i++) {
+// for (let i = 1 ; i <= num ; i++) {
 //     document.writeln(i);
 // }
 
@@ -52,8 +55,6 @@
 
 // let computer = Math.floor(Math.random() * 10) + 1;
 // let guess = parseInt(prompt("Please guess a number between 1 and 10"));
-// console.log(computer);
-// console.log(guess);
 // while (guess !== computer) {
 //     guess = parseInt(prompt("Wrong! Guess Again!"));
 // }
@@ -61,9 +62,9 @@
 
 // The Break Statement in a loop
 
-// for (let current = 20; ; current = current + 1) {
-//     if (current % 7 == 0) {
-//       console.log(current);
-//       break;
-//     }
-//   }
+for (let current = 10; ; current++) {
+    if (current % 7 === 0) {
+      console.log(current);
+      break;
+    }
+  }
