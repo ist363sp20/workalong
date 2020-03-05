@@ -35,7 +35,7 @@ main.appendChild(newtag);
 // Show Window properties
 console.log(window.innerHeight);
 
-main.style.height = (window.innerHeight + 3000).toString() + "px";
+//main.style.height = (window.innerHeight + 3000).toString() + "px";
 
 // setTimeout(function() {
 //     main.style.height = window.innerHeight.toString() + "px";
@@ -46,7 +46,16 @@ main.style.height = (window.innerHeight + 3000).toString() + "px";
 // Show location properties
 // setTimeout setInterval
 
-window.scrollTo({
-    top: 1200,
-    behavior: 'smooth'
-  });
+// window.scrollTo({
+//     top: 1200,
+//     behavior: 'smooth'
+//   });
+
+document.getElementsByTagName("a")[0].addEventListener("click", function(evt) {
+    evt.preventDefault();
+    console.log(evt.target.href);
+    if (true) {
+        window.location.assign("http://localhost:5500/whycors.html")
+    }
+    
+})
