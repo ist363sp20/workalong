@@ -1,11 +1,5 @@
 var firebaseConfig = {
-  apiKey: "AIzaSyD_gMVOzQoqQvjkL93ZakV0aEZasnas8xs",
-  authDomain: "fir-b23bf.firebaseapp.com",
-  databaseURL: "https://fir-b23bf.firebaseio.com",
-  projectId: "fir-b23bf",
-  storageBucket: "fir-b23bf.appspot.com",
-  messagingSenderId: "182198124364",
-  appId: "1:182198124364:web:e3c707f1a6d6c7d75019e9"
+  
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
