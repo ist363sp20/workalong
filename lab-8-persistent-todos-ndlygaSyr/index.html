@@ -11,6 +11,9 @@
     <style>
         body {height:100vh;}
         .text-strikethrough { text-decoration: line-through; }
+        #itemList li {
+            cursor: pointer;
+        }
     </style>
 
 </head>
@@ -19,16 +22,14 @@
         <h1>My Todo List</h1>
         <div>
             <form id="addForm">
-                <input type="text" id="itemText">
+                <input type="text" id="itemText" name="itemText" required>
                 <button type="submit">Add</button>
             </form>
         </div>
-        <div id="itemList">
-            list will go here!
-        </div>
-    
+        <ul id="itemList"></ul>
+        <button id="clearBtn">Clear Completed</button>
     </div>
 
-
+    <script src="main.js"></script>
 </body>
 </html>
