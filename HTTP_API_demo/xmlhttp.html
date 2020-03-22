@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XMLHTTPRequest Demo</title>
+
+    <style>
+        #urlInput {
+            width: 100%;
+            display: block;
+        }
+        body, html {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        #myFrame {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <input id="urlInput" type="text" />
+    <button id="loadUrl">Load URL</button>
+    <iframe id="myFrame"></iframe>
+    
+</body>
+
+<script>
+
+/*
+To run this demo you may will need to install this plugin
+https://chrome.google.com/webstore/search/CORS?hl=en-US
+*/
+
+// Click Handler to load the url
+function loadUrl() {
+    var url = document.getElementById("urlInput").value;
+
+    // XMLHttpRequest
+    var http = new XMLHttpRequest()
+    http.onreadystatechange = function(ev) {
+        if(this.readyState === 4 && this.status === 200) {
+            document.getElementById("myFrame").contentDocument.write(this.responseText);
+        } else if (this.readyState === 4 && this.status !== 200) {
+            alert("Didn't work!");
+        }
+    }
+    http.open("GET", url);
+    http.send();
+}
+
+// Click Event listener
+document.getElementById("loadUrl").addEventListener("click", loadUrl);
+
+
+</script>
+</html>
