@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Sketchbook</title>
+</head>
+<body>
+
+    <select id="tool">
+        <option value="brush">Brush</option>
+        <option value="eraser">Eraser</option>
+      </select>
+      <select id="color">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+        <option value="orange">Orange</option>
+        <option value="purple">Purple</option>
+      </select>
+      <button id="clearButton">Clear</button>
+      <button id="saveButton">Save</button>
+    <div id="sketchBook"></div>
+    
+     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+
+     <!-- Add Firebase products that you want to use -->
+     <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+    
+     <!-- Konva Library -->
+    <script src="https://unpkg.com/konva@4.0.0/konva.min.js"></script>
+    
+    <script src="sketchbook.js"></script>
+</body>
+</html>
