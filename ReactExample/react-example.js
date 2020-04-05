@@ -10,6 +10,10 @@ class App extends React.Component {
                 {
                     title: "Comment 2",
                     content: "Another Comment"
+                },
+                {
+                    title: "Comment 3",
+                    content: "This is the 3rd comment"
                 }
             ]
         }
@@ -20,8 +24,7 @@ class App extends React.Component {
                 {this.state.comments.map(comment => {
                     return (
                         <div>
-                            <div>{comment.title}</div>
-                            <div>{comment.content}</div>
+                            <Comment comment={comment} />
                         </div>
                     )
                 })}
