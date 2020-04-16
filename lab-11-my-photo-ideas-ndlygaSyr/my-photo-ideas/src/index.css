@@ -1,0 +1,32 @@
+html, body {
+    height: 100%;
+  }
+  
+  #root {
+    height: 100%;
+  }
+  
+  .logo {
+    max-width: 200px;
+  }
+  
+  .btn.btn-primary {
+    background-color: #59427c;
+    border-color: #59427c
+  }
+  
+  .btn.btn-primary:hover,
+  .btn.btn-primary:active,
+  .btn.btn-primary:focus {
+    background-color: #8f77b7;
+    border-color: #8f77b7
+  }
+  
+  .btn-link {
+    color: #59427c !important;
+  }
+  
+  .hidden {
+    margin-left: -9999px;
+    position: absolute;
+  }
